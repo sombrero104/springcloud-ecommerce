@@ -21,7 +21,19 @@ eureka:
         # => Eureka 서버로부터 인스턴스들의 정보를 주기적으로 가져올 것인지를 설정하는 속성. 
 ~~~
 
-http://localhost:8761 로 접속하면 System Status를 확인할 수 있다. <br/>
+~~~
+@SpringBootApplication
+@EnableEurekaServer
+public class App {
+
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+
+}
+~~~ 
+
+App을 실행 후 http://localhost:8761 로 접속하면 System Status를 확인할 수 있다. <br/>
 
 <img src="./images/eureka_dashboard.png" width="70%" /><br/>
 
